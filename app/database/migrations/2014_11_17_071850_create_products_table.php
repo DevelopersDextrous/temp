@@ -16,7 +16,7 @@ class CreateProductsTable extends Migration {
                 Schema::create('products', function($table){
                     $table->increments('id');
                     $table->integer('category_id')->unsigned();
-                    $table->forign('category_id')->references('id')->on('categories');
+                    $table->foreign('category_id')->references('id')->on('categories');
                     $table->string('title');
                     $table->text('description');
                     $table->decimal('price', 6, 2);
